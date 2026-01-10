@@ -1,0 +1,207 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    padding: 1rem;
+    background-color: #f0c781;
+}
+
+.nav-con {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.logo a {
+    font-size: 1.5rem; /* ลดขนาดข้อความในโลโก้ */
+    color: rgb(82, 156, 221);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 1rem; /* ลดช่องระหว่างเมนู */
+}
+
+.menu li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.maincontent {
+    background-color: #f3daae; /* สีพื้นหลังที่ดูอบอุ่น */
+    width: 100%;
+    padding: 1rem; /* ลด padding ของ maincontent */
+}
+
+.maincontent-con {
+    display: flex;
+}
+
+.maincontent-info {
+    width: 100%;
+    padding: 1rem; /* ลด padding */
+}
+
+.maincontent-info h3 {
+    font-size: 1.5rem; /* ลดขนาดหัวข้อ */
+}
+
+.maincontent-info p {
+    margin: 0.5rem 0; /* ลด margin ระหว่างข้อความ */
+}
+
+.maincontent-info .maincontent-btn {
+    background-color: #d48d48; /* ปรับสีปุ่ม */
+    color: #fff;
+    padding: 0.8rem 1.5rem; /* ลดขนาด padding */
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #e0a353;
+    font-size: 0.9rem; /* ลดขนาดฟอนต์ */
+}
+
+.product-heading {
+    font-size: 2rem; /* ขนาดตัวอักษร */
+    margin-top: 2rem; /* ระยะห่างจากรูปภาพ */
+    color: #333; /* สีตัวอักษร */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+.maincontent-img {
+    text-align: center; /* จัดให้รูปภาพอยู่กลาง */
+    margin-top: 2rem; /* ระยะห่างจากปุ่ม "ติดต่อเรา" */
+}
+
+.maincontent-info a.maincontent-btn {
+    display: inline-block;
+    margin-top: 1rem; /* ระยะห่างจากข้อความ */
+}
+
+
+.maincontent-img {
+    width: 100%;
+    max-width: 400px; /* กำหนดขนาดสูงสุด */
+    height: auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* ปรับขนาดฟอนต์ของ body */
+body {
+    background-color: #f7f0e1;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem; /* ปรับขนาดฟอนต์ทั้งหมด */
+}
+
+
+.content-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 20px;
+}
+
+
+.container-titlr {
+    margin: 2rem 0;
+    padding: 0 20px;
+}
+
+.content-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.content-item img {
+    width: 100%;
+}
+
+.content-item h4 {
+    margin-top: 1rem;
+}
+
+.content-item p {
+    margin: 1rem 0;
+}
+
+.content-item a {
+    display: inline-block;
+    color: #fffafa;
+    background-color: red;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.footer-top {
+    margin-top: 2rem;
+    padding: 3rem;
+    background-color: #888484;
+    color: #fff;
+    width: 100%; /* ขยาย footer ให้เต็มหน้าจอ */
+}
+
+.footer-top-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* แบ่งคอลัมน์เป็น 3 ส่วน */
+    gap: 2rem; /* ระยะห่างระหว่างคอลัมน์ */
+}
+
+.footer-top-item {
+    padding: 1rem; /* เพิ่มระยะห่างในแต่ละคอลัมน์ */
+}
+
+.footer-top-item-con {
+        display: flex;
+        margin: 1rem 0;
+    }
+
+.footer-top-item-con .date {
+    background-color: #fff;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 7px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+
+.footer-top-item h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-top-item .info {
+    margin-bottom: 1rem;
+}
+
+.footer-top-item p {
+    margin: 0.5rem 0;
+}
+
+    .footer-buttom {
+        background-color: #d0cece;
+        padding: 1rem;
+        text-align: center;
+    }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดสินค้า</title>
+    <style>
+        .product-image {
+            width: 200px; /* กำหนดความกว้าง */
+            height: auto; /* ความสูงจะปรับอัตโนมัติ */
+        }
+    </style>
+</head>
+<body>
+    <h1>รายละเอียดสินค้า</h1>
+
+    <!-- แสดงรายละเอียดของสินค้า -->
+    <img src="" alt="สินค้า" id="product-img" class="product-image">
+    <h2 id="product-name"></h2>
+    <p id="product-description"></p>
+    <p>ข้อมูลเพิ่มเติมอื่นๆ เช่น ราคา, ขนาด, หรือการใช้งาน</p>
+
+    <script>
+        // ฟังก์ชันเพื่อดึงพารามิเตอร์จาก URL
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        var productId = getQueryParam('id'); // ดึงค่า 'id' จาก URL
+
+        // ข้อมูลสินค้าต่างๆ
+        var productDetails = {
+            1: {
+                name: "Netflix 4K",
+                description: "รายละเอียดของสินค้า 1",
+                img: "img/netflix-logo-netflix-icon-free-free-vector.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 1
+            },
+            2: {
+                name: "ชื่อสินค้า 2",
+                description: "รายละเอียดของสินค้า 2",
+                img: "img/product2-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 2
+            },
+            3: {
+                name: "ชื่อสินค้า 3",
+                description: "รายละเอียดของสินค้า 3",
+                img: "img/product3-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 3
+            },
+            4: {
+                name: "ชื่อสินค้า 4",
+                description: "รายละเอียดของสินค้า 4",
+                img: "img/product4-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 4
+            },
+            5: {
+                name: "ชื่อสินค้า 5",
+                description: "รายละเอียดของสินค้า 5",
+                img: "img/product5-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 5
+            },
+            6: {
+                name: "ชื่อสินค้า 6",
+                description: "รายละเอียดของสินค้า 6",
+                img: "img/product6-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 6
+            },
+            7: {
+                name: "ชื่อสินค้า 7",
+                description: "รายละเอียดของสินค้า 7",
+                img: "img/product7-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 7
+            },
+            8: {
+                name: "ชื่อสินค้า 8",
+                description: "รายละเอียดของสินค้า 8",
+                img: "img/product8-image.jpg"  // เส้นทางรูปภาพสำหรับสินค้า 8
+            }
+        };
+
+        // ค้นหาสินค้าตาม ID
+        var product = productDetails[productId] || productDetails[1]; // หากไม่มี ID ให้แสดงสินค้าแรก
+
+        // แสดงรายละเอียดสินค้าในหน้า
+        document.getElementById('product-name').textContent = product.name;
+        document.getElementById('product-img').src = product.img;  // แสดงรูปภาพที่ตรงกับ id
+        document.getElementById('product-description').textContent = product.description;
+    </script>
+
+</body>
+</html>
