@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptPay Link Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin: 15px 0;
+        }
+
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .result-message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>สร้างลิงค์เปิดแอปธนาคาร PromptPay</h2>
+        
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="amount">จำนวนเงิน (THB):</label>
+                <input type="number" id="amount" placeholder="กรุณากรอกจำนวนเงิน" required>
+            </div>
+
+            <input type="submit" value="เปิดแอปธนาคาร">
+        </form>
+
+        <div id="result-message" class="result-message"></div>
+    </div>
+
+    <script>
+        // Fixed PromptPay number
+        const promptPayNumber = '0828129100';
+
+        // JavaScript function to handle the form submission
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission to server
+
+            const amount = document.getElementById('amount').value;
+
+            if (amount && amount > 0) {
+                // Display confirmation message
+                document.getElementById('result-message').textContent = `คุณจะโอนเงินจำนวน ${amount} บาท ไปยังเบอร์ ${promptPayNumber}`;
+
+                // Generate the PromptPay URI scheme link with the amount
+                const promptPayLink = `promptpay://pay?receiver=${promptPayNumber}&amount=${amount}`;
+
+                // Try to open the link with URI scheme
+                window.location.href = promptPayLink;
+
+                // If the app doesn't open within a few seconds, redirect to the website
+                setTimeout(function() {
+                    if (!document.hasFocus()) {
+                        window.location.href = `https://promptpay.io/${promptPayNumber}/${amount}`;
+                    }
+                }, 2000);
+            } else {
+                document.getElementById('result-message').textContent = 'กรุณากรอกจำนวนเงินที่ถูกต้อง';
+            }
+        });
+    </script>
+
+</body>
+</html>
