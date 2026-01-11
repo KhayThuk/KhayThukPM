@@ -1,4 +1,3 @@
-/* ตั้งค่าพื้นฐาน */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,25 @@
 
 nav {
     padding: 1rem;
-    background-color: #f0c781;
+    background-color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
 }
 
 .nav-con {
@@ -108,9 +125,15 @@ nav {
 
 /* ปรับขนาดฟอนต์ของ body */
 body {
-    background-color: #f7f0e1;
+    background-color: #ffffff;
     font-family: 'Georgia', serif;
     font-size: 0.9rem; /* ปรับขนาดฟอนต์ทั้งหมด */
+     font-size: 1rem; /* ขนาดตัวอักษรหลักใช้ rem เพื่อความยืดหยุ่น */
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+
 }
 
 
@@ -187,8 +210,7 @@ body {
     margin-right: 10px;
 }
 
-
-.footer-top-item h4 {
+.footer-top-item h3 {
     margin-bottom: 1rem;
 }
 

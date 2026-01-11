@@ -9,6 +9,19 @@
             width: 200px; /* กำหนดความกว้าง */
             height: auto; /* ความสูงจะปรับอัตโนมัติ */
         }
+
+        .maincontent-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fb8c00; /* สีพื้นหลังที่ต้องการ */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px; /* มุมมน */
+            font-weight: bold; /* ตัวหนา */
+            text-align: center;
+            transition: background-color 0.3s ease; /* การเปลี่ยนสีเมื่อวางเมาส์ */
+        }
+
     </style>
 </head>
 <body>
@@ -18,7 +31,11 @@
     <img src="" alt="สินค้า" id="product-img" class="product-image">
     <h2 id="product-name"></h2>
     <p id="product-description"></p>
-    <p>ข้อมูลเพิ่มเติมอื่นๆ เช่น ราคา, ขนาด, หรือการใช้งาน</p>
+
+    <a href="https://lin.ee/JjmSLO6" class="maincontent-btn">ติดต่อสั่งซื้อ</a>
+    <br>
+    <br>
+    <a href="index.html">ย้อนกลับสู่หน้าหลัก</a>
 
     <script>
         // ฟังก์ชันเพื่อดึงพารามิเตอร์จาก URL
